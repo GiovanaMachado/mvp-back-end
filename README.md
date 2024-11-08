@@ -14,6 +14,6 @@ Objetivo e Situação Problema do Projeto
 
 Com o desafio de criar um website que proporcione facilicdade e agilidade de agendamento, o sistema Agenda Fácil Naf tem o intuito de ajudar as pessoas com um atendimento eficiente e de fácil entendimento para quem busca assistência fiscal.
 
-Tecnologias ultilizadas: HTML, CSS, JAVA.
+Tecnologias ultilizadas:
 
 Público Alvo: Estudantes, professores e população local
