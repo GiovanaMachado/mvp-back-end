@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendaFácil NAF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       
+        <h1>AgendaFácil NAF</h1>
+
+        <p>Simplifique seu agendamento de atendimento no Núcleo de Apoio Contábil e Fiscal (NAF) do Unifeso.</p>
+        <ul> 
+            <li>Administração</li>
+            <li>Perfil do Usuário</li>
+            <li>Feedback e Avaliação</li>
+        </ul>
+        <img class="img" src="./img/LogUnifeso.jpeg" alt=" Logo AgendaFácil Unifeso">
+
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Sobre o NAF</h2>
+            <p>
+                A proposta do AgendaFácil NAF é facilitar o agendamento de atendimentos para assistência fiscal e contábil.
+                O sistema permite à população marcar horários para atendimentos, especialmente na temporada de declaração de Imposto de Renda.
+            </p>
+        </section>
+
+
+        <section id="booking">
+            <h2>Agende seu Atendimento</h2>
+            <form id="booking-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="service">Serviço:</label>
+                <select id="service" name="service" required>
+                    <option value="imposto">Declaração de Imposto de Renda</option>
+                    <option value="consultoria">Consultoria Fiscal</option>
+                </select>
+
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Horário:</label>
+                <select id="time" name="time" required>
+                    <option value="07:00">07:00</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+
+                </select>
+
+
+            
+                
+
+                <button type="submit">Agendar Atendimento</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AgendaFácil NAF - Unifeso</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const allowedTimes = ["07:00", "09:00", "10:00", "11:00", "13:00 ", "15:00", "16:00", "17:00"]
+        
+        document.getElementById("time").addEventListener("input", function() {
+          const timeValue = this.value;
+          if (!allowedTimes.includes(timeValue)) {
+            alert("Por favor, selecione um horário válido.");
+            this.value = ""; // Limpa o campo
+          }
+        });
+      </script>
+</body>
+</html>
